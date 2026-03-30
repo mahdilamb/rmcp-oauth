@@ -1,0 +1,33 @@
+[package]
+name = "rmcp-oauth"
+version = "0.1.0"
+edition = "2021"
+description = "OAuth 2.1 authorization layer for rmcp (Rust MCP SDK)"
+license = "MIT"
+
+[dependencies]
+async-trait = "0.1"
+axum = "0.8"
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+hex = "0.4"
+http = "1"
+rand = "0.9"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_urlencoded = "0.7"
+sha2 = "0.10"
+subtle = "2"
+thiserror = "2"
+tokio = { version = "1", features = ["sync", "macros", "rt"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors"] }
+tower-service = "0.3"
+tracing = "0.1"
+urlencoding = "2"
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
